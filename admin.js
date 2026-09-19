@@ -17,12 +17,17 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyCKmgV86tOBBD562OxsiMUcaxOhNkuau2E",
   authDomain: "school-management-dc25c.firebaseapp.com",
+  databaseURL: "https://school-management-dc25c-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "school-management-dc25c",
   storageBucket: "school-management-dc25c.firebasestorage.app",
   messagingSenderId: "1057617132397",
   appId: "1:1057617132397:web:3de5fbdd46784792b33864",
   measurementId: "G-DX06HH66TV"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
