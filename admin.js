@@ -6,15 +6,27 @@ import { getFirestore, collection, doc, getDoc, getDocs, addDoc, updateDoc, quer
   ضع إعدادات مشروع Firebase الخاص بك هنا.
   من Firebase Console > Project settings > Your apps > Web app
 */
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.firebasestorage.app",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCKmgV86tOBBD562OxsiMUcaxOhNkuau2E",
+  authDomain: "school-management-dc25c.firebaseapp.com",
+  projectId: "school-management-dc25c",
+  storageBucket: "school-management-dc25c.firebasestorage.app",
+  messagingSenderId: "1057617132397",
+  appId: "1:1057617132397:web:3de5fbdd46784792b33864",
+  measurementId: "G-DX06HH66TV"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
